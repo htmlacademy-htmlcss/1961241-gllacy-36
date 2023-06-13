@@ -3,9 +3,8 @@
 
   <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/Inter/stylesheet.css">
     <link rel="stylesheet" href="/style/style.css">
     <title>HTML Academy - Глейси</title>
   </head>
@@ -14,76 +13,57 @@
 
     <div class="page-container">
       <header class="header">
-        <nav class="navigation">
-          <a class="navigation-logo">
-            <img src="/images/logo.svg" alt="Логотип Глейси" width="137" height="56" class="navigation-logo-image">
+        <ul class="container">
+          <li class="logo">
+          <a class="logo_link">
+            <img src="/images/logo.svg" alt="Логотип Глейси" width="137" height="56" class="logo_icon">
           </a>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <ul class="navigation-catalog-list">
-                <li class="navigation-catalog-item">
-                  <p class="navigation-catalog-title">
-                    Каталог
-                    <img class="catalog-arrow" src="/images/arrowdown.svg" width="11" height="6" alt="Развернуть">
-                  </p>
-                </li>
-                <ul class="subnavigation">
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#"><strong>Новинки</strong></a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Сливочное</a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Щербеты</a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Фруктовый лед</a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Мелорин</a>
-                  </li>
-                </ul>
-              </ul>
-            </li>
-            <li class="navigation-item">
-              <a href="" class="navigation-menu">Доставка и оплата</a>
-            </li>
-            <li class="navigation-item">
-              <a href="" class="navigation-menu">О компании</a>
-            </li>
-          </ul>
-          <ul class="navigation-user">
-            <li class="navigation-user-item">
-              <address class="addres">
-                <a href="tel:+78005558628" class="navigation-tel">+7 800 555-86-28</a>
-              </address>
-            <li class="navigation-user-item">
-              <button class="navigation-button" type="button">
-                <img src="/images/search.svg" width="13" height="13" alt="Поиск" class="navigation-button-icon">
-                <span class="visually-hidden">Поиск</span>
-              </button>
-            </li>
-            <li class="navigation-user-item">
-              <button class="navigation-button" type="button">
-                <img src="/images/login.svg" width="13" height="13" alt="Вход" class="navigation-button-icon">
-                Вход
-              </button>
-            </li>
-            <li class="navigation-user-item">
-              <button class="navigation-button" type="button">
-                <img src="/images/black-cart.svg" width="14" height="13" alt="Корзина" class="navigation-button-icon">
-                2 товара
-              </button>
-            </li>
-          </ul>
-        </nav>
+          </li>
+          <li>
+            <a class="container_link" href="">
+              Каталог
+              <img src="/images/arrowdown.svg" width="11" height="6" alt="Стрелка вниз" class="arrow_down">
+            </a>
+            <ul class="sub_menu">
+              <li><a href="#t1"><span class="sub_menu_text">Новинки</span></a></li>
+              <li><a href="/catalog.html#t2">Сливочное</a></li>
+              <li><a href="">Щербеты</a></li>
+              <li><a href="">Фруктовый лед</a></li>
+              <li><a href="">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a class="container_link" href="">Доставка и оплата</a></li>
+          <li><a class="container_link" href="">О нас</a></li>
+        </ul>
+        <ul class="nav_user">
+          <li class="navigation-user-item">
+            <address class="addres">
+              <a href="tel:+78005558628" class="navigation-tel">+7 800 555-86-28</a>
+            </address>
+          <li class="navigation-user-item">
+            <button class="navigation-button" type="button">
+              <img src="/images/search.svg" width="13" height="13" alt="Поиск" class="navigation-button-icon">
+              <span class="visually-hidden">Поиск</span>
+            </button>
+          </li>
+          <li class="navigation-user-item">
+            <button class="navigation-button" type="button">
+              <img src="/images/login.svg" width="13" height="13" alt="Вход" class="navigation-button-icon">
+              <span class="nav-text">Вход</span>
+            </button>
+          </li>
+          <li class="navigation-user-item">
+            <button class="navigation-button" type="button">
+              <img src="/images/black-cart.svg" width="14" height="13" alt="Корзина" class="navigation-button-icon">
+              <span class="nav-text">2 товара</span>
+            </button>
+          </li>
+        </ul>
       </header>
-
       <main class="main">
         <h1 class="visually-hidden">Глейси - магазин мороженного</h1>
         <section class="slider">
-          <h2 class="visually-hidden">Наши новинки</h2>
+          <h2 class="visually-hidden" id="t1">Наши новинки</h2>
           <div class="img-slider">
             <div class="slide">
               <div class="info-slide">
@@ -135,7 +115,6 @@
                 height="150" class="slide3">
             </div>
           </div>
-
           <ul class="buttons-slider-list">
             <li class="button-slider-item">
               <button class="slider-prev" type="button">
@@ -150,7 +129,6 @@
               </button>
             </li>
           </ul>
-
           <div class="pagi-soc">
             <div class="pagination">
               <input type="radio" name="slider" id="slide1" checked>
@@ -180,7 +158,6 @@
             </ul>
           </div>
         </section>
-
         <section class="offer-gift">
           <h2 class="offer-gift-head-tittle">Заказывайте мороженое<br>и получайте подарки!</h2>
           <ul class="offer-gift-list">
@@ -202,7 +179,6 @@
             </li>
           </ul>
         </section>
-
         <section class="popular-flavors-icecream">
           <h2 class="visually-hidden">Популярные вкусы</h2>
           <p class="popular-flavors-icecream-tittle">Попробуйте самые популярные<br>вкусы нашего мороженого</p>
@@ -257,7 +233,6 @@
             </li>
           </ul>
         </section>
-
         <div class="about-container">
           <section class="about-info">
             <h2 class="visually-hidden">О нас</h2>
@@ -288,7 +263,6 @@
             </ul>
           </section>
         </div>
-
         <div class="blog-menu">
           <div class="blog-post">
             <article class="blog">
@@ -298,7 +272,6 @@
                 <a href="#" class="blog-link">10 способов сервировки<br>фруктовых щербетов<br>к столу</a>
             </article>
           </div>
-
           <div class="sending-blog">
             <section class="sending">
               <h2 class="visually-hidden">Подпись на рассылку</h2>
@@ -312,7 +285,6 @@
             </section>
           </div>
         </div>
-
         <section class="delivery">
           <h2 class="delivery-tittle">Доставка любимого мороженого на дом</h2>
           <p class="delivery-text-one">Хочется полакомиться любимым десертом,<br>но нет времени съездить в магазин?
@@ -340,7 +312,6 @@
             </form>
           </div>
         </section>
-
         <section class="contact">
           <h2 class="visually-hidden">Наш адрес</h2>
           <address class="contact-info">
@@ -353,7 +324,6 @@
           </address>
         </section>
       </main>
-
       <footer class="footer">
         <section class="social">
           <h2 class="visually-hidden">Социальные сети</h2>
@@ -378,7 +348,6 @@
             </li>
           </ul>
         </section>
-
         <section class="feedback">
           <h2 class="visually-hidden">Обратная связь</h2>
           <ul class="feedback-list">
@@ -396,7 +365,6 @@
             </li>
           </ul>
         </section>
-
         <section class="htmlacademy">
           <h2 class="visually-hidden">HTML Academy</h2>
           <a href="https://htmlacademy.ru/" class="htmlacademy-link"></a>
