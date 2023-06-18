@@ -26,7 +26,7 @@
   overflow: hidden;
 }
 
-body {
+html body {
   height: 100%;
   background: #FEAFC3 no-repeat;
   background-size: cover;
@@ -34,9 +34,9 @@ body {
 }
 
 .main_container {
-  max-width: 1170px;
-  width: 100%;
+  width: 1170px;
   margin: 0 auto;
+  position: relative;
 }
 
 header {
@@ -163,32 +163,20 @@ header {
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 28px;
   margin-bottom: 16px;
+}
+
+.breadcrumb *+* {
+  margin-left: 8px;
 }
 
 .breadcrumb_link {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  position: relative;
 }
 
-.breadcrumb_link:nth-child(1)::after {
-  content: url(/images/breadcrumb-arrow.svg);
-  position: absolute;
-  left: 65px;
-  top: 1px;
-}
-
-.breadcrumb_link:nth-child(2)::after {
-  content: url(/images/breadcrumb-arrow.svg);
-  position: absolute;
-  left: 65px;
-  top: 1px;
-}
-
-.breadcrumb_link:nth-child(3) {
+.breadcrumb_link:nth-child(5) {
   text-decoration: underline;
 }
 
